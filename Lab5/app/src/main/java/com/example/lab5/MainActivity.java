@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationXml (btnRotateXml, R.anim.anim_rotate);
         handleClickAnimationXml (btnMoveXml, R.anim.anim_rotate);
         handleClickAnimationXml (btnSlideUpXml, R.anim.anim_slide_up);
-        handleClickAnimationXml (btnBlinkXml, R.anim.anim_bounce);
+        handleClickAnimationXml (btnBounceXml, R.anim.anim_bounce);
         handleClickAnimationXml (btnCombineXml, R.anim.anim_combine);
 
     }
@@ -44,70 +44,77 @@ public class MainActivity extends AppCompatActivity {
     private void handleClickAnimationXml(Button btn, int animId) {
         //HandleClickAnimationXML
         // load the animation
-        final Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_in);
+        final Animation animation1 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_in);
+        final Animation animation2 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_fade_out);
+        final Animation animation3 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_blink);
+        final Animation animation4 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_zoom_in);
+        final Animation animation5 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_zoom_out);
+        final Animation animation6 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_rotate);
+        final Animation animation7 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_move);
+        final Animation animation8= AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_slide_up);
+        final Animation animation9 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_bounce);
+        final Animation animation10 = AnimationUtils.loadAnimation(MainActivity.this, R.anim.anim_combine);
 
         //set animation listener
-        animation.setAnimationListener(animationListener);
-
         //handle onClickListener to start animation
         btnFadeInXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation1);
             }
         });
         btnFadeOutXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation2);
             }
         });
         btnBlinkXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation3);
             }
         });
         btnZoomInXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation4);
             }
         });
         btnZoomOutXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation5);
             }
         });
         btnRotateXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation6);
             }
         });
         btnMoveXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation7);
             }
         });
         btnSlideUpXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation8);
             }
         });
         btnBounceXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation9);
             }
         });
         btnCombineXml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ivUitLogo.startAnimation(animation);
+                ivUitLogo.startAnimation(animation10);
             }
         });
     }
